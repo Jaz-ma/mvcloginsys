@@ -16,7 +16,7 @@ include "includes/class-autoload.inc.php";
 </head>
 <body style='height : 100vh;' class="d-flex flex-column justify-content-center align-items-center bg-info " >
 <h1>Log in</h1>    
-<form class='d-flex flex-column bg-primary p-3' action="login.php" method="post">
+<form class='d-flex flex-column bg-primary p-3' action="login.inc.php" method="post">
         <label class="text-secondary my-1" for="username">Username</label>
         <input type="text" name ="username" required>
         <label class="text-secondary my-1" for="password">Password</label>
@@ -25,7 +25,7 @@ include "includes/class-autoload.inc.php";
     </form>
     <h1>Sign up</h1>    
 
-    <form class='d-flex flex-column bg-primary p-3' action="login.php" method="post">
+    <form class='d-flex flex-column bg-primary p-3' action="signup.inc.php" method="post">
         <label class="text-secondary my-1" for="username">Username</label>
         <input type="text" name ="username" required>
         <label class="text-secondary my-1" for="password">Password</label>
