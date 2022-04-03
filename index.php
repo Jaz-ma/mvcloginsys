@@ -12,7 +12,7 @@ include "includes/class-autoload.inc.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>login</title>
+    <title>Home </title>
 </head>
 <body >
 

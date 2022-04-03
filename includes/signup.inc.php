@@ -7,9 +7,9 @@ if (isset($_POST['submit'])){
     $pwdrepeat= $_POST['pwdrepeat'];
     $email= $_POST['email'];
 
-    include '../classes/Dbh.class.php';
-    include '../classes/Signup.class.php';
-    include '../classes/Signupcontr.class.php';
+    
+
+    include 'class-autoload.inc.php';
 
     $signup= new Signupcontr($username,$pwd,$pwdrepeat,$email);
 
