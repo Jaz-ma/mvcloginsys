@@ -2,7 +2,7 @@
 
 class Signup extends Dbh {
     protected function checkuser($username,$email){
-        $stmt= $this->connect()->prepare('SELECT users_id FROM users WHERE users_id =? OR users_email=?;');
+        $stmt= $this->connect()->prepare('SELECT users_id FROM users WHERE users_username =? OR users_email=?;');
 
         if(!$stmt->execute(array($username,$email))){
             $stmt = null;
@@ -22,7 +22,7 @@ class Signup extends Dbh {
     }
 
     protected function setUser($username,$password,$email){
-        $stmt= $this->connect()->prepare('INSERT INTO users (users_username,users_password,users_email) VALUES (?,?,?);');
+        $stmt= $this->connect()->prepare('INSERT INTO users (users_username,users_pwd,users_email) VALUES (?,?,?);');
         
         $hashedpwd = password_hash($password, PASSWORD_DEFAULT);
         

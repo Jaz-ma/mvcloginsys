@@ -4,7 +4,7 @@ if (isset($_POST['submit'])){
 
     $username= $_POST['username'];
     $pwd= $_POST['pwd'];
-    $pwdrepeate= $_POST['pwdrepeat'];
+    $pwdrepeat= $_POST['pwdrepeat'];
     $email= $_POST['email'];
 
     include '../classes/Dbh.class.php';

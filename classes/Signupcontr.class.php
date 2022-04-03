@@ -41,7 +41,7 @@ class Signupcontr extends Signup{
             exit();
         }
        
-        $this->setUser($this->username,$this->password,$this->email);
+        $this->setUser($this->username,$this->pwd,$this->email);
     }
 
     private function emptyInput(){
@@ -69,7 +69,7 @@ class Signupcontr extends Signup{
 
     private function invalidemail(){
 
-        if(!filter_var($this->username, FILTER_VALIDATE_EMAIL)){
+        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
             $result = false;
         }
         else{
@@ -80,7 +80,7 @@ class Signupcontr extends Signup{
     }
     private function pwdmatch(){
 
-        if($this->pwd!==$this->pwdrepeat){
+        if($this->pwd !== $this->pwdrepeat){
             $result = false;
         }
         else{
