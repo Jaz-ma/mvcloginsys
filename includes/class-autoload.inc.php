@@ -1,10 +1,10 @@
 <?php
 
-
+spl_autoload_register('myAutoLoader');
 
 function myAutoLoader($classname){
 
-    $path = 'classes/';
+    $path = '../classes/';
     $extension = '.class.php';
     $filename = $path . $classname . $extension;
 
@@ -15,4 +15,3 @@ function myAutoLoader($classname){
     include_once $path . $classname . $extension;    
 }
 
-spl_autoload_register('myAutoLoader');
