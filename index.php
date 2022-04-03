@@ -33,7 +33,7 @@ include "includes/class-autoload.inc.php";
 </nav>
 <div style='height : 100vh; width : 100vw;' class="d-flex  justify-content-center align-items-center bg-info " >
 
-<form class='d-flex flex-column bg-primary m-3 p-3 ' action="login.inc.php" method="post">
+<form class='d-flex flex-column bg-primary m-3 p-3 ' action="includes/login.inc.php" method="post">
     <h1>Log in</h1>
        
         <label class="text-secondary my-1" for="username">Username</label>
@@ -44,7 +44,7 @@ include "includes/class-autoload.inc.php";
     </form>
 
 
-    <form class='d-flex flex-column bg-primary m-3 p-3' action="signup.inc.php" method="post">
+    <form class='d-flex flex-column bg-primary m-3 p-3' action="includes/signup.inc.php" method="post">
     <h1>Sign up</h1>    
 
       <label class="text-secondary my-1" for="username">Email</label>
