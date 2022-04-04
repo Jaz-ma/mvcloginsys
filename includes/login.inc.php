@@ -11,9 +11,9 @@ if (isset($_POST['submit'])){
 
     include 'class-autoload.inc.php';
 
-    $signup= new Signupcontr($username,$pwd,$pwdrepeat,$email);
+    $signup= new Logincontr($username,$pwd,$pwdrepeat,$email);
 
-    $signup->signupUser();
+    $signup->loginUser();
     
     header("location: ../index.php?error=none");
 }
