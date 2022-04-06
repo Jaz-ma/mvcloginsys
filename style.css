@@ -10,6 +10,11 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
+nav h2{
+    letter-spacing: 2px;
+    font-size: 30px;
+    
+}
 .navlist{
     margin: 0;
     padding: 0;
