@@ -10,7 +10,7 @@ if (isset($_POST['submit'])){
 
     include 'class-autoload.inc.php';
 
-    $loginup= new Logincontr($username,$pwd,$pwdrepeat,$email);
+    $loginup= new Logincontr($username,$pwd);
 
     $loginup->loginUser();
     
