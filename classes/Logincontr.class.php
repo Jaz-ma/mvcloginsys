@@ -25,7 +25,7 @@ class Logincontr extends Login{
 
     private function emptyInput(){
         
-        if(empty($this->username)|| empty($this->pwd)|| empty($this->pwdrepeat)|| empty($this->email)){
+        if(empty($this->username)|| empty($this->pwd)){
             $result = false;
         }
         else{

@@ -20,7 +20,7 @@ class Login extends Dbh{
         }
 
         $hashedpwd =$stmt->fetchAll(PDO::FETCH_ASSOC);
-        $checkpwd = password_verify($password,$hashedpwd[0],["users_pwd"]);
+        $checkpwd = password_verify($password,$hashedpwd[0]["users_pwd"]);
 
 
         if($checkpwd== false){
