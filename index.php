@@ -2,6 +2,7 @@
 
 include "includes/class-autoload.inc.php";
 
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -30,8 +31,27 @@ include "includes/class-autoload.inc.php";
         </ul>
     </div>
     <ul class="navlist">
-        <li><a href="#">Sign Up</a></li>
-        <li><a href="#">Login</a></li>
+        <?php
+
+        if(isset($_SESSION["userun"]))
+        {
+
+            ?>
+
+        <li><a href="#"><?php echo $_SESSION['userun'] ?> </a></li>
+        <li><a href="includes/logout.inc.php" class="logio-btn">Logout</a></li>
+
+        <?php
+        }
+
+        else{
+
+            ?>
+            <li><a href="#">Sing Up </a></li>
+        <li><a href="index.php" class="logio-btn">Login</a></li>
+        <?php
+        }
+        ?>
     </ul>
     
 </nav>

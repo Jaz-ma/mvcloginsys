@@ -28,3 +28,9 @@ nav{
     align-items: center;
     width: 50%;
 }
+.logio-btn{
+    padding: 1rem;
+    background-color: rgb(6, 44, 100);
+    color: aliceblue;
+    border-radius: 10px;
+}
