@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    padding: 1rem 0 ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navlist{
+    margin: 0;
+    padding: 0;
+}
+
+.navlist li{
+    margin: 0 0.5rem;
+    display: inline;
+}
+.navlist li a{
+    text-decoration: none;
+}
+.main-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}

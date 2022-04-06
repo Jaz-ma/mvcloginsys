@@ -11,26 +11,32 @@ include "includes/class-autoload.inc.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Home </title>
 </head>
 <body >
 
-<nav>
-    <div>
+<header class="bg-dark text-light">
+<nav class="">
+    <div class="main-list">
         <h2>
             frogsite
         </h2>
-        <ul>
-            <a href="#home"><li>home</li></a>
+        <ul class="navlist">
+            <li> <a href="index.php">Home</a></li>            
+            <li> <a href="">About</a></li>            
+            <li> <a href="">Products</a></li>            
+            <li> <a href="">Contact</a></li>            
         </ul>
-
-        <div>
-            <button>Login</button>
-
-        </div>
     </div>
+    <ul class="navlist">
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+    
 </nav>
+</header>
+
 <div style='height : 100vh; width : 100vw;' class="d-flex  justify-content-center align-items-center bg-info " >
 
 <form class='d-flex flex-column bg-primary m-3 p-3 ' action="includes/login.inc.php" method="post">
