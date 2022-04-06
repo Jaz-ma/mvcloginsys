@@ -6,7 +6,7 @@ class Login extends Dbh{
         $stmt= $this->connect()->prepare('SELECT users_pwd FROM users WHERE users_username = ? OR users_email= ?;');
         
         
-        if(!$stmt->execute(array($username,$password))){
+        if(!$stmt->execute(array($username,$username))){
             $stmt = null;
             header("localtion: ../index.php?error=stmtfailed");
             exit();
