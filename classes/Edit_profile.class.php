@@ -2,11 +2,11 @@
 
 class Edit_profile extends Dbh{
 
-  protected function changeUsername($username,$password){
+  protected function changeUsername($username,$newusername,$password){
         $stmt= $this->connect()->prepare('SELECT users_pwd FROM users WHERE users_username = ?');
         
         
-        if(!$stmt->execute($username)){
+        if(!$stmt->execute(array($username))){
             $stmt = null;
             header("localtion: ../index.php?error=stmtfailed");
             exit();
@@ -25,19 +25,26 @@ class Edit_profile extends Dbh{
 
         if($checkpwd== false){
             $stmt=null;
-            header('location: ../index.php?error=incorrectpassword');
+            header('location: ../profile.php?error=incorrectpassword');
+            session_start();
+
+            $_SESSION['Failed']="Something has gone wrong";
             exit();
         }
         elseif($checkpwd==true){
-            $stmt= $this->connect()->prepare('UPDATE users SET users_username = ? WHERE users.users_pwd=?');
+            $stmt= $this->connect()->prepare('UPDATE users SET users_username = ? WHERE users.users_pwd = ?;');
 
-            if(!$stmt->execute(array($username,$password))){
+            if(!$stmt->execute(array($newusername,$password))){
                 $stmt = null;
                 header("localtion: ../profile.php?error=stmtfailed");
+                session_start();
+
+                $_SESSION['Failed']="Something has gone wrong";
                 exit();
             }
           
-          
+            
+
 
             
 
