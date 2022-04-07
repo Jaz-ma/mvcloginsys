@@ -35,10 +35,10 @@ session_start();
 
         if(isset($_SESSION["userun"]))
         {
-
+            $profileurl = $_SESSION['userun'];
             ?>
 
-        <li><a href="#"><?php echo $_SESSION['userun'] ?> </a></li>
+        <li><a href="profile.php?user=<?php echo $profileurl ?>"><?php echo $_SESSION['userun'] ?> </a></li>
         <li><a href="includes/logout.inc.php" class="logio-btn">Logout</a></li>
 
         <?php
