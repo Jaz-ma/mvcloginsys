@@ -74,18 +74,13 @@ include "includes/class-autoload.inc.php";
 
     </div>
     <div class="container  bg-light">
-    <form action="includes/edit-profile.inc.php" method="POST" class="py-4">
+    <form action="includes/edit_profile.inc.php" method="post" class="py-4">
   
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Your Password</label>
-    <input type="password" name="pwd" class="form-control" id="exampleInputPassword1" required>
-  </div>
-  <div class="mb-3">
-    <label for="new_name" class="form-label">Your New Name</label>
-    <input type="text" name="new_name" class="form-control" id="new_name" aria-describedby="new_name" required>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
+    <label class="text-secondary my-1" for="New_name">Your New Name</label>
+        <input type="text" name ="new_name" required>
+        <label class="text-secondary my-1" for="password">Your Password</label>
+        <input type="password" name ="pwd" required>      
+        <button class="btn btn-info" type="submit" name="submit">Submit Changes</button> 
 
   
 </form>
@@ -100,14 +95,17 @@ include "includes/class-autoload.inc.php";
         
 
         <?php
+        unset($_SESSION['Success']);
         }
 
-        else{
+        elseif(isset($_SESSION['Failed'])){
 
             ?>
             <h3>Something went wrong</h3>
         
         <?php
+                unset($_SESSION['Failed']);
+
         }
         ?>
     </div>

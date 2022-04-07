@@ -1,15 +1,16 @@
 <?php
-
+session_start();
 class Edit_profilecontr extends Edit_profile{
     private $username;
+    private $newusername;
     private $pwd;
 
 
-    public function __construct($username,$pwd)
+    public function __construct($newusername,$pwd)
     {
-        $this->username = $username;
+        $this->newusername = $newusername;
         $this->pwd = $pwd;
-        
+        $this->username =  $_SESSION["userun"];
 
     }
 
@@ -20,7 +21,7 @@ class Edit_profilecontr extends Edit_profile{
         }
 
        
-        $this->changeUsername($this->username,$this->pwd);
+        $this->changeUsername($this->username,$this->newusername,$this->pwd);
     }
 
     private function emptyInput(){
@@ -33,4 +34,8 @@ class Edit_profilecontr extends Edit_profile{
         }
         return $result;
     }
+
+    // private function checkusernamechange(){
+    //     if()
+    // }
 }
