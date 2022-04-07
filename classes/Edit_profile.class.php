@@ -8,14 +8,14 @@ class Edit_profile extends Dbh{
         
         if(!$stmt->execute(array($username))){
             $stmt = null;
-            header("localtion: ../index.php?error=stmtfailed");
+            header("localtion: ../profile.php?error=stmtfailed");
             exit();
         }
 
         if($stmt->rowCount() == 0){
 
             $stmt = null;
-            header('location: ../index.php?error=usernotfound');
+            header('location: ../profile.php?error=usernotfound');
             exit();
         }
 
@@ -41,12 +41,7 @@ class Edit_profile extends Dbh{
 
                 $_SESSION['Failed']="Something has gone wrong";
                 exit();
-            }
-          
-            
-
-
-            
+            }          
 
             session_start();
 
