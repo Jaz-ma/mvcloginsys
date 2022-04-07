@@ -73,6 +73,44 @@ include "includes/class-autoload.inc.php";
     <h1><?php echo $user ?>'s Profile </h1>
 
     </div>
+    <div class="container  bg-light">
+    <form action="includes/edit-profile.inc.php" method="POST" class="py-4">
+  
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Your Password</label>
+    <input type="password" name="pwd" class="form-control" id="exampleInputPassword1" required>
+  </div>
+  <div class="mb-3">
+    <label for="new_name" class="form-label">Your New Name</label>
+    <input type="text" name="new_name" class="form-control" id="new_name" aria-describedby="new_name" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  
+</form>
+<?php
+
+        if(isset($_SESSION["Success"]))
+        {
+
+            ?>
+
+        <h3 href="#"><?php echo $_SESSION['Success'] ?> </h3>
+        
+
+        <?php
+        }
+
+        else{
+
+            ?>
+            <h3>Something went wrong</h3>
+        
+        <?php
+        }
+        ?>
+    </div>
 
 
 

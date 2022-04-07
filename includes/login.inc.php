@@ -10,9 +10,9 @@ if (isset($_POST['submit'])){
 
     include 'class-autoload.inc.php';
 
-    $loginup= new Logincontr($username,$pwd);
+    $login= new Logincontr($username,$pwd);
 
-    $loginup->loginUser();
+    $login->loginUser();
     
     header("location: ../index.php?error=none");
 }
