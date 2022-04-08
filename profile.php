@@ -74,15 +74,23 @@ include "includes/class-autoload.inc.php";
 
     </div>
     <div class="container  bg-light">
-    <form action="includes/edit_profile.inc.php" method="post" class="py-4">
+    <form action="includes/edit_profile.inc.php" method="post" class="py-4 d-flex flex-column">
   
-    <label class="text-secondary my-1" for="New_name">Your New Name</label>
+    <label class=" my-3" for="New_name">Your New Name</label>
         <input type="text" name ="new_name" required>
-        <label class="text-secondary my-1" for="password">Your Password</label>
+        <label class=" my-3" for="password">Your Password</label>
         <input type="password" name ="pwd" required>      
-        <button class="btn btn-info" type="submit" name="submit">Submit Changes</button> 
+        <button class="btn btn-info my-4" type="submit" name="submit">Submit Changes</button> 
 
   
+</form>
+
+<form action="includes/edit_profile.inc.php" method="post" class="py-4 d-flex flex-column">
+  
+       
+      <button class="btn btn-info my-4" type="submit" name="submit">Submit Changes</button> 
+
+
 </form>
 <?php
 

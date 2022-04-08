@@ -9,7 +9,7 @@ class Edit_profilecontr extends Edit_profile{
     public function __construct($newusername,$pwd)
     {
         $this->newusername = $newusername;
-        $this->pwd = $pwd;
+        $this->pwd =  $pwd;
         $this->username =  $_SESSION["userun"];
 
     }
