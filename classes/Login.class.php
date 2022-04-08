@@ -29,7 +29,7 @@ class Login extends Dbh{
             exit();
         }
         elseif($checkpwd==true){
-            $stmt= $this->connect()->prepare('SELECT * FROM users WHERE users_username = ? OR users_email= ? AND users_pwd = ?;');
+            $stmt= $this->connect()->prepare('SELECT * FROM users WHERE users_username = ? OR users_email = ? AND users_pwd = ?;');
 
             if(!$stmt->execute(array($username,$username,$password))){
                 $stmt = null;
@@ -40,7 +40,7 @@ class Login extends Dbh{
             if($stmt->rowCount() == 0){
 
                 $stmt = null;
-                header('location: ../index.php?error=usernotfound');
+                header('location: ../index.php?error=usernotfoundwithpassword');
                 exit();
             }
 
