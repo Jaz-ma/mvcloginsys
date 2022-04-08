@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    z-index: 10;
+}
+nav{
+    padding: 1rem 0 ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav h2{
+    letter-spacing: 2px;
+    font-size: 30px;
+    
+}
+.navlist{
+    margin: 0;
+    padding: 0;
+}
+
+.navlist li{
+    margin: 0 0.5rem;
+    display: inline;
+}
+.navlist li a{
+    text-decoration: none;
+}
+.main-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+.logio-btn{
+    padding: 1rem;
+    background-color: rgb(6, 44, 100);
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+#Sidebar{
+    position: fixed;
+    background-color: rgba(7, 0, 0, 0.781);
+    height: 100vh;
+    width: 30%;
+}
+#Sidebar h1{
+    color: aliceblue;
+}
+
+.wrapper{
+    display: block;
+    margin-left: 9rem;
+}
+#newnameform{
+display: none;
+}
+
+form label,input{
+    display: block;
+}
+.show{
+    display: block  !important;
+}
+@media only screen and (max-width: 1110px) {
+   .list1{
+       display: none;
+   }
+  }

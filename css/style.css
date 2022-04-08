@@ -51,11 +51,7 @@ nav h2{
 #Sidebar h1{
     color: aliceblue;
 }
-.wrapper{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-}
+
 
 form label,input{
     display: block;

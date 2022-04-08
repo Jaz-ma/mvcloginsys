@@ -23,7 +23,8 @@ include "includes/class-autoload.inc.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <script defer src="script.js"></script>
     <title><?php echo $_SESSION['userun'] ?>'s Profile </title>
 </head>
 <body >
@@ -34,7 +35,7 @@ include "includes/class-autoload.inc.php";
         <h2>
             frogsite
         </h2>
-        <ul class="navlist">
+        <ul class="navlist list1">
             <li> <a href="index.php">Home</a></li>            
             <li> <a href="">About</a></li>            
             <li> <a href="">Products</a></li>            
@@ -70,11 +71,13 @@ include "includes/class-autoload.inc.php";
 
 <Section id="Sidebar">
     <div class="wrapper">
-    <h1><?php echo $user ?>'s Profile </h1>
+    <h1 class="mb-5"><?php echo $user ?>'s Profile </h1>
+
+    <button class="btn btn-info my-4" id="edit-name">Edit Your Name</button>
 
     </div>
     <div class="container  bg-light">
-    <form action="includes/edit_profile.inc.php" method="post" class="py-4 d-flex flex-column">
+    <form id="newnameform" action="includes/edit_profile.inc.php" method="post" class="py-4 ">
   
     <label class=" my-3" for="New_name">Your New Name</label>
         <input type="text" name ="new_name" required>
