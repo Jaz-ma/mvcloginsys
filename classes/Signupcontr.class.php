@@ -37,7 +37,7 @@ class Signupcontr extends Signup{
         }
 
         if ($this->userexists()== false) {
-            header('location: ../index.php?error=userexists');
+            header('location: ../index.php?error=useralreadyexists');
             exit();
         }
        

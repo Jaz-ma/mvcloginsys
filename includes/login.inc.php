@@ -14,5 +14,5 @@ if (isset($_POST['submit'])){
 
     $login->loginUser();
     
-    header("location: ../index.php?error=none");
+    header("location: ../profile.php");
 }
