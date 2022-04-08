@@ -85,10 +85,10 @@ include "includes/class-autoload.inc.php";
   
 </form>
 
-<form action="includes/edit_profile.inc.php" method="post" class="py-4 d-flex flex-column">
+<form action="includes/id.inc.php" method="post" class="py-4 d-flex flex-column">
   
        
-      <button class="btn btn-info my-4" type="submit" name="submit">Submit Changes</button> 
+      <button class="btn btn-info my-4" type="submit" name="submit">get id</button> 
 
 
 </form>
