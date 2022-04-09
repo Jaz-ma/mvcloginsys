@@ -62,26 +62,27 @@ session_start();
 <form class='d-flex flex-column bg-primary m-3 p-3 ' action="includes/login.inc.php" method="post">
     <h1>Log in</h1>
        
-        <label class="text-secondary my-1" for="username">Username</label>
+        <label class="text-light my-1" for="username">Username</label>
         <input type="text" name ="username" required>
-        <label class="text-secondary my-1" for="password">Password</label>
-        <input type="password" name ="pwd" required>      
-        <button class="btn btn-info" type="submit" name="submit">Log In</button>      
+        <label class="text-light my-1" for="password">Password</label>
+        <input type="password" name ="pwd" required> 
+        <a class="text-info mt-2" href="forgotpassword.php">Forgot Password?</a>     
+        <button class="btn btn-info my-3" type="submit" name="submit">Log In</button>      
     </form>
 
 
     <form class='d-flex flex-column bg-primary m-3 p-3' action="includes/signup.inc.php" method="post">
     <h1>Sign up</h1>    
 
-      <label class="text-secondary my-1" for="username">Email</label>
+      <label class="text-light my-1" for="username">Email</label>
         <input type="email" name ="email" required>
-        <label class="text-secondary my-1" for="username">Username</label>
+        <label class="text-light my-1" for="username">Username</label>
         <input type="text" name ="username" required>
-        <label class="text-secondary my-1" for="password">Password</label>
+        <label class="text-light my-1" for="password">Password</label>
         <input type="password" name ="pwd" required>
-        <label class="text-secondary my-1" for="password">Retype Password</label>
+        <label class="text-light my-1" for="password">Retype Password</label>
         <input type="password" name ="pwdrepeat" required>
-        <button class="btn btn-info" type="submit" name="submit"> Sign up</button>      
+        <button class="btn btn-info my-3" type="submit" name="submit"> Sign up</button>      
     </form>
 </div>
 
