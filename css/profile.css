@@ -53,12 +53,23 @@ nav h2{
 }
 
 .wrapper{
-    display: block;
-    margin-left: 9rem;
+    display: flex !important;
+    
+    align-items: center;
+    justify-content: space-around;
 }
-#newnameform{
+
+#inner_wrapper{
+
 display: none;
+
 }
+
+#delete_wrapper{
+
+    display: none;
+    
+    }
 
 form label,input{
     display: block;

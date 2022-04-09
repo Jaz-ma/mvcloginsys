@@ -6,7 +6,7 @@ class Signup extends Dbh {
 
         if(!$stmt->execute(array($username,$email))){
             $stmt = null;
-            header("localtion: ../index.php?error=stmtfailed");
+            header("location: ../index.php?error=stmtfailed");
             exit();
         }
         
