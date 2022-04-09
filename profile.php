@@ -71,50 +71,62 @@ include "includes/class-autoload.inc.php";
 
 <Section id="Sidebar">
     <div class="wrapper">
-    <h1 class="mb-5"><?php echo $user ?>'s Profile </h1>
+    <h1 class=""><?php echo $user ?>'s Profile </h1>
 
     <button class="btn btn-info my-4" id="edit-name">Edit Your Name</button>
 
+    <button class="btn btn-info my-4" id="delete-user">Delete User</button>
     </div>
-    <div class="container  bg-light">
+    <div id="inner_wrapper" class="container  bg-light">
     <form id="newnameform" action="includes/edit_profile.inc.php" method="post" class="py-4 ">
   
-    <label class=" my-3" for="New_name">Your New Name</label>
+    <label class=" my-2" for="New_name">Your New Name</label>
         <input type="text" name ="new_name" required>
         <label class=" my-3" for="password">Your Password</label>
         <input type="password" name ="pwd" required>      
-        <button class="btn btn-info my-4" type="submit" name="submit">Submit Changes</button> 
+        <button class="btn btn-info my-4" type="submit" name="submit">Change Name</button> 
 
   
 </form>
 
-
-<?php
-
-        if(isset($_SESSION["Success"]))
-        {
-
-            ?>
-
-        <h3 href="#"><?php echo $_SESSION['Success'] ?> </h3>
-        
-
-        <?php
-        unset($_SESSION['Success']);
-        }
-
-        elseif(isset($_SESSION['Failed'])){
-
-            ?>
-            <h3>Something went wrong</h3>
-        
-        <?php
-                unset($_SESSION['Failed']);
-
-        }
-        ?>
     </div>
 
+
+    <div id="delete_wrapper" class=" container bg-light">
+    <form id="deleteuserform" action="includes/delete_profile.inc.php" method="post" class="py-4 ">
+  
+ 
+  <label class=" my-3" for="password">Your Password</label>
+  <input type="password" name ="pwd" required>      
+  <button class="btn btn-info my-4" type="submit" name="submit">Delete User</button> 
+
+</form>
+    </div>
+    <?php
+
+if(isset($_SESSION["Success"]))
+{
+
+    ?>
+
+<h6 id="notif" class="text-light" href="#"><?php echo $_SESSION['Success'] ?> </h6>
+ 
+ 
+
+<?php
+unset($_SESSION['Success']);
+}
+
+elseif(isset($_SESSION['Failed'])){
+
+?>
+    <h3 id="notif" class="text-light " >Something went wrong</h3>
+   
+<?php
+        unset($_SESSION['Failed']);
+
+}
+?>
 
 
 
